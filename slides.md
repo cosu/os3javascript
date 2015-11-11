@@ -1,6 +1,6 @@
 % JavaScript Mandatory Fun!
 % Cosmin Dumitru
-% 13 November 2015
+% 11 November 2015
 
 
 Vanity Slide
@@ -147,7 +147,7 @@ Arrays
 var arr = ['foo', 'bar'];
 arr.length
 > 2
-arr[1]
+arr[0]
 > 'foo'
 arr.push('baz')
 > [ 'foo', 'bar', 'baz' ]
@@ -193,7 +193,8 @@ Operators
 2 === '2' // false
 1 == true //true
 1 === true // false
-"a" === new String("a") // false - string vs Object
+"a" === new String("a") // false
+//string vs Object
 ```
 
 Functions
@@ -260,7 +261,7 @@ Scope
 * Scope is defined statically - lexical scoping
 
 ```javascript
-var foo = 'spam'; // global scope
+var x = 'spam'; // global scope
 
 function bar () {
     var x = 'eggs'; // local scope
@@ -548,7 +549,7 @@ npm install jslint
 {
   "name" : "foo",
   "version" : "0.0.0",
-   "dependencies": {
+  "dependencies": {
       "bar": "1.0.42",
   },
 }
@@ -673,7 +674,7 @@ for ( var i = 0; i < 5; i++) {
 
 Other cool things
 --------------------
-* Flow - tatic type checker
+* Flow - static type checker
 ```javascript
 function mul(a, b){
     return a*b;

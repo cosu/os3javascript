@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Cosmin Dumitru">
-  <meta name="dcterms.date" content="2015-11-13">
+  <meta name="dcterms.date" content="2015-11-11">
   <title>JavaScript Mandatory Fun!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -68,7 +68,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <section>
     <h1 class="title">JavaScript Mandatory Fun!</h1>
     <h2 class="author">Cosmin Dumitru</h2>
-    <h3 class="date">13 November 2015</h3>
+    <h3 class="date">11 November 2015</h3>
 </section>
 
 <section id="vanity-slide" class="slide level2">
@@ -235,7 +235,7 @@ shirt[<span class="st">&#39;size&#39;</span>]
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> arr <span class="op">=</span> [<span class="st">&#39;foo&#39;</span><span class="op">,</span> <span class="st">&#39;bar&#39;</span>]<span class="op">;</span>
 <span class="va">arr</span>.<span class="at">length</span>
 <span class="op">&gt;</span> <span class="dv">2</span>
-arr[<span class="dv">1</span>]
+arr[<span class="dv">0</span>]
 <span class="op">&gt;</span> <span class="st">&#39;foo&#39;</span>
 <span class="va">arr</span>.<span class="at">push</span>(<span class="st">&#39;baz&#39;</span>)
 <span class="op">&gt;</span> [ <span class="st">&#39;foo&#39;</span><span class="op">,</span> <span class="st">&#39;bar&#39;</span><span class="op">,</span> <span class="st">&#39;baz&#39;</span> ]</code></pre></div></li>
@@ -281,7 +281,8 @@ arr[<span class="dv">1</span>]
 <span class="dv">2</span> <span class="op">===</span> <span class="st">&#39;2&#39;</span> <span class="co">// false</span>
 <span class="dv">1</span> <span class="op">==</span> <span class="kw">true</span> <span class="co">//true</span>
 <span class="dv">1</span> <span class="op">===</span> <span class="kw">true</span> <span class="co">// false</span>
-<span class="st">&quot;a&quot;</span> <span class="op">===</span> <span class="kw">new</span> <span class="at">String</span>(<span class="st">&quot;a&quot;</span>) <span class="co">// false - string vs Object</span></code></pre></div></li>
+<span class="st">&quot;a&quot;</span> <span class="op">===</span> <span class="kw">new</span> <span class="at">String</span>(<span class="st">&quot;a&quot;</span>) <span class="co">// false</span>
+<span class="co">//string vs Object</span></code></pre></div></li>
 </ul></li>
 </ul>
 </section>
@@ -345,7 +346,7 @@ arr[<span class="dv">1</span>]
 <li>Only functions can create a new scope - function-level scope</li>
 <li>Scope is defined statically - lexical scoping</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> foo <span class="op">=</span> <span class="st">&#39;spam&#39;</span><span class="op">;</span> <span class="co">// global scope</span>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> x <span class="op">=</span> <span class="st">&#39;spam&#39;</span><span class="op">;</span> <span class="co">// global scope</span>
 
 <span class="kw">function</span> <span class="at">bar</span> () <span class="op">{</span>
     <span class="kw">var</span> x <span class="op">=</span> <span class="st">&#39;eggs&#39;</span><span class="op">;</span> <span class="co">// local scope</span>
@@ -607,7 +608,7 @@ realPromise
 <div class="sourceCode"><pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
   <span class="dt">&quot;name&quot;</span> <span class="fu">:</span> <span class="st">&quot;foo&quot;</span><span class="fu">,</span>
   <span class="dt">&quot;version&quot;</span> <span class="fu">:</span> <span class="st">&quot;0.0.0&quot;</span><span class="fu">,</span>
-   <span class="dt">&quot;dependencies&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+  <span class="dt">&quot;dependencies&quot;</span><span class="fu">:</span> <span class="fu">{</span>
   <span class="dt">&quot;bar&quot;</span><span class="fu">:</span> <span class="st">&quot;1.0.42&quot;</span><span class="fu">,</span>
   <span class="fu">},</span>
 <span class="fu">}</span></code></pre></div></li>
@@ -732,7 +733,7 @@ mul <span class="op">=</span> (a<span class="op">,</span>b)<span class="op">-&gt
 <section id="other-cool-things" class="slide level2">
 <h1>Other cool things</h1>
 <ul>
-<li><p>Flow - tatic type checker</p>
+<li><p>Flow - static type checker</p>
 <div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">mul</span>(a<span class="op">,</span> b)<span class="op">{</span>
 <span class="cf">return</span> a<span class="op">*</span>b<span class="op">;</span>
 <span class="op">}</span>
